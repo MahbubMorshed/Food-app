@@ -12,21 +12,26 @@ const HeroSection = () => {
     "/img/gallery/img_7.jpg",
     "/img/gallery/img_8.jpg",
     "/img/gallery/img_9.jpg",
+    "/img/gallery/img_10.jpg",
+    "/img/gallery/img_15.jpg",
+    "/img/gallery/img_12.jpg",
   ];
   return (
     <div className="section hero">
-      <div className="cols">
+      <div className="col typography">
         <h1 className="title">What are we about</h1>
         <p className="info">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet,
-          neque porro quibusdam facilis tempora veniam doloremque similique
-          officia eaque perferendis.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ex
+          veniam est vitae voluptates et, rerum in totam dolor atque fugiat
+          aliquam nihil! Amet nam id ea quidem fuga, ratione est doloremque
+          dolores delectus architecto voluptate odio corrupti? Consequuntur,
+          itaque!
         </p>
         <button className="btn">Explore now</button>
       </div>
-      <div className="cols gallery">
+      <div className="col gallery">
         {images.map((src, index) => (
-          <CustomImage imgSrc={src} pt={"85%"} key={index} />
+          <CustomImage key={index} imgSrc={src} pt={"90%"} />
         ))}
       </div>
     </div>

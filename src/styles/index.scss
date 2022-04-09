@@ -23,20 +23,15 @@ body {
 a {
     text-decoration: none;
 }
-.container {
-    padding-inline: 15vw;
-}
-.main {
-    padding-block: 3vw;
-}
-
 .section {
     display: flex;
     align-items: center;
+    margin-bottom: 3vw;
     .title{
         color: var(--text-color);
-        font-size: 3em;
+        font-size: 2.5em;
         margin-bottom: .25em;
+        font-weight: 900;
     }
     .info {
         color: var(--text-color);
@@ -49,43 +44,42 @@ a {
         width: 50%;
     }
 }
-.section.hero {
-    .gallery{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 1.76vw;
+.section.improve-skills {
+    .col.img{
+        img{
+            width: 100%;
+        }   
+    }
+    .col.typography{
+        padding-left: 1em;
+        .skill-item{
+            border-left: .25em solid var(--primary-color);
+            margin-bottom: 0.5em;
+            padding: .1em 0 .1em .5em;
+            color: var(--text-light);
+            font-weight: bold;
+            transform: translateX(100%);
+            opacity: 0;
+            animation: getAnimationDuration(.3s) slideInRight forwards;
+            @for $i from 1 through 7{
+                &:nth-child(#{$i}) {
+                    animation-delay: #{$i * .1}s;
+                }
+            }
+        }
+        .btn{
+            margin-top: .75em;
+        }
     }
 }
-.btn {
-    border: none;
-    outline: none;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: .75em 1em;
-    text-transform: uppercase;
-    font-size: 1.1em;
-    font-weight: bold;
-    letter-spacing: 1px;
-    border-radius: 3px;
-    box-shadow: 0 2px 6px var(--shadow-color);
-    &:hover{
-        box-shadow: 0 1px 3px var(--shadow-color);
-    }
+.container {
+    padding-inline: 12vw;
 }
-.custom-image {
-    background-color: red;
-    height: 0;
-    width: 100%;
-    position: relative;
-    img{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-}
+.main {
+    padding-block: 3vw;
+} 
 
+@import "partials/hero-section.scss";
 
 @import "partials/navbar.scss";
 
