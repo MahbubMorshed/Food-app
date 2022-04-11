@@ -44,42 +44,37 @@ a {
         width: 50%;
     }
 }
-.section.improve-skills {
-    .col.img{
-        img{
-            width: 100%;
-        }   
-    }
-    .col.typography{
-        padding-left: 1em;
-        .skill-item{
-            border-left: .25em solid var(--primary-color);
-            margin-bottom: 0.5em;
-            padding: .1em 0 .1em .5em;
-            color: var(--text-light);
-            font-weight: bold;
-            transform: translateX(100%);
-            opacity: 0;
-            animation: getAnimationDuration(.3s) slideInRight forwards;
-            @for $i from 1 through 7{
-                &:nth-child(#{$i}) {
-                    animation-delay: #{$i * .1}s;
-                }
-            }
-        }
-        .btn{
-            margin-top: .75em;
-        }
-    }
-}
+
 .container {
     padding-inline: 12vw;
 }
 .main {
     padding-block: 3vw;
 } 
+.top-chief-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 1.5em;
+}
+.section.chiefs {
+    display: block
+}
+.chief-card {
+    display: flex;
+    height: 120px;
+    img{
+        height: 100%;
+        width: 120px;
+        border-radius: 5px;
+    }
+}
+
 
 @import "partials/hero-section.scss";
+
+@import "partials/improve-section.scss";
+
+@import "partials/quote-section.scss";
 
 @import "partials/navbar.scss";
 

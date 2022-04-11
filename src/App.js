@@ -2,6 +2,8 @@ import "./styles/index.scss";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import ImproveSkills from "./components/ImproveSkills";
+import Quotes from "./components/Quotes";
+import ChiefSection from "./components/ChiefSection";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <div className="container main">
         <HeroSection />
         <ImproveSkills />
+        <Quotes />
+        <ChiefSection />
       </div>
     </div>
   );

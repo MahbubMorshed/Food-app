@@ -39,9 +39,6 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          {/* <a href="#!">Home</a>
-          <a href="#!">Recipes</a>
-          <a href="#!">Settings</a> */}
         </div>
 
         <div
