@@ -1,16 +1,27 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
-const ChiefCard = () => {
+const ChiefCard = ({ chief }) => {
   return (
     <div className="chief-card">
-      <img src="/img/top-chef/img_1.jpg" alt="" />
+      <img src={chief.img} alt="" />
       <div className="chief-card-info">
-        <h3 className="chief-card-name">Juan Carlos</h3>
+        <h3 className="chief-card-name">{chief.name}</h3>
         <p className="chief-recipe-count">
-          Recipes: <b>10</b>
+          Recipes: <b>{chief.recipesCount}</b>
         </p>
         <p className="chief-cuisine">
-          Cuisine: <b>Mexican</b>
+          Cuisine: <b>{chief.cuisine}</b>
+          <p className="chief-icons">
+            <FontAwesomeIcon icon={faFacebook} />
+            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon icon={faInstagram} />
+          </p>
         </p>
       </div>
     </div>
